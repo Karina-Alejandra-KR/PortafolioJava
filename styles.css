@@ -1,0 +1,86 @@
+/*ESTILOS GENERALES*/
+*{
+    box-sizing: border-box;
+    font-family: "Mona Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+html {
+    scroll-behavior: smooth;
+}
+/*MENÚ ENCABEZADO*/
+.contenedor-header{
+    background: #1e2326;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+.contenedor-header header{
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+.contenedor-header header .logo a{
+    font-size: 36px;
+    font-weight: 900;
+    color: #7F1A1F;
+    text-decoration: none;
+}
+.contenedor-header header ul{
+    display: flex;
+    list-style: none;
+}
+.contenedor-header header nav ul li a{
+    text-align: none;
+    color: #E5E5E5;
+    font-weight: bold;
+    margin: 0 15px;
+    padding: 5px;
+    transition: .2s;
+    text-decoration: none;
+}
+.contenedor-header header nav ul li a:hover{
+    background: #77A4FB;
+    box-shadow: 0 0 5px #77A4FB, 0 0 20px #77A4FB, 0 0 70px #77A4FB;
+    color: #E5E5E5;
+    font-weight: bold;
+    border-radius: 4px;
+}
+.nav-responsive{
+    background-color: #77A4FB;
+    color: #E5E5E5;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+}
+
+/*SECCIÓN RESPONSIVA*/
+@media screen and (max-width:980px){
+    nav{
+        display: none;
+    }
+    .nav-responsive{
+        display: block;
+    }
+    nav.responsive{
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 75%;
+        background-color: #252A2E;
+        width: 180px;
+    }
+    nav.responsive ul{
+        display: block !important;
+    }
+    nav.responsive ul li{
+        border-bottom: 1px solid #1e2326;
+        padding: 10px 0;
+    }
+}
