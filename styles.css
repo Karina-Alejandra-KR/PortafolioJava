@@ -67,6 +67,7 @@ html {
 .inicio{
     background: linear-gradient(to top, rgba(30,35,38,.8), rgba(30,35,38,1)), url(./recursos/img/fondo_principal.jpg);
     background-size: cover;
+    background-attachment: fixed;
     height: 100vh;
     color: #E5E5E5;
     display: flex;
@@ -135,6 +136,91 @@ html {
     background-color: #77A4FB;
     box-shadow: 0 0 1px #77A4FB, 0 0 5px #77A4FB, 0 0 20px #77A4FB;
 }
+/*SECCIÓN SOBRE MÍ*/
+.sobremi{
+    background-color: #1e2326;
+    color: #E5E5E5;
+    padding: 50px 20px;
+}
+.sobremi .contenido-seccion{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 1040px;
+    margin: auto;
+}
+.sobremi h2{
+    font-size: 42px;
+    text-align: center;
+    padding: 20px 0;
+}
+.sobremi .contenido-seccion p{
+    font: 18px;
+    font-weight: bold;
+    line-height: 30px;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+.sobremi-p-bc{
+    background: linear-gradient(to top, rgba(30,35,38,.8), rgba(30,35,38,1)), url(./recursos/img/fondo_principal.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 20px;
+    border-radius: 15px;
+}
+.sobremi .contenido-seccion p span{
+    color: #77A4FB;
+    font-weight: bold;
+}
+.sobremi .fila{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 1040px;
+    margin: auto;
+}
+.sobremi .fila .col{
+    width: 50%;
+}
+.sobremi .fila .col h3{
+    font-size: 28px;
+    margin-bottom: 25px;
+}
+.sobremi .fila .col .contenedor-intereses{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.sobremi .fila .col .contenedor-intereses .interes{
+    width: 100px;
+    height: 100px;
+    background-color: #252A2E;
+    border-radius: 10px;
+    margin: 0 15px 15px 0;
+    padding: 6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: .3s;
+}
+.sobremi .fila .col .contenedor-intereses .interes:hover{
+    background-color: #E5E5E5;
+    color: black;
+}
+.sobremi .fila .col .contenedor-intereses .interes i{
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.sobremi .fila .col .contenedor-intereses .interes span{
+    font-size: 10px;
+    font-weight: bold;
+    text-align: center;
+}
 
 /*SECCIÓN RESPONSIVA*/
 @media screen and (max-width:980px){
@@ -158,5 +244,20 @@ html {
     nav.responsive ul li{
         border-bottom: 1px solid #1e2326;
         padding: 10px 0;
+    }
+}
+@media screen and (max-width:700px){
+    .sobremi .fila{
+        display: block;
+    }
+    .sobremi .fila .col{
+        width: fit-content;
+    }
+    .sobremi .fila .col .contenedor-intereses{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
     }
 }
