@@ -221,8 +221,136 @@ html {
     font-weight: bold;
     text-align: center;
 }
+/*SECCIÓN HABILIDADES*/
+.habilidades {
+    display: block;
+    flex-wrap: wrap;
+    background-color: #252A2E;
+    padding-top: 5%;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+.carruseles {
+    width: 75vw;
+    height: auto;
+    margin: auto;
+    overflow: hidden;
+}
+.carruseles-subtitulo{
+    font-size: 42px;
+    color: #E5E5E5;
+    text-align: center;
+    padding-bottom: 5%;
+}
+.carruseles .carrusel-pista {
+    display: flex;
+    animation: scroll 40s linear infinite;
+    -webkit-animation: scroll 40s linear infinite;
+    width: calc(200px * 18);
+}
+.carruseles .carrusel {
+    width: 200px;
+}
+.carruseles .carrusel img {
+    width: 100%;
+}
+@keyframes scroll {
+    0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+    100% {
+        -webkit-transform: translateX(calc(-200px * 9));
+        transform: translateX(calc(-200px * 9));
+    }
+}
+.blandas {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 10%;
+}
+.blandas h2 {
+    color: #E5E5E5;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+}
+.blandas h2::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    bottom: -15px;
+    left: 0;
+    background-color: #7F1A1F;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.6s ease-in-out;
+}
+.blandas h2:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
 
 /*SECCIÓN RESPONSIVA*/
+@media screen and (max-width:768px){
+    .sobremi .fila{
+        display: block;
+    }
+    .sobremi .fila .col{
+        width: fit-content;
+    }
+    .sobremi .fila .col .contenedor-intereses{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+    }
+    .habilidades {
+        padding-top: 5%;
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+    .carruseles {
+        width: 100vw;
+        padding: 0;
+        margin-top: 50px;
+    }
+    .carruseles .carrusel-pista {
+        width: calc(150px * 18);
+    }
+    .carruseles .carrusel {
+        width: 140px;
+        margin-top: 50px;
+    }
+    .blandas {
+        flex-direction: column;
+        padding-top: 5%;
+        text-align: center;
+    }
+    .blandas h2 {
+        margin: 10px 0;
+        font-size: 18px;
+    }
+    .blandas h2::after {
+        content: '';
+        position: absolute;
+        width: 28%;
+        height: 4px;
+        bottom: -15px;
+        left: 36%;
+        background-color: #7F1A1F;
+        transform: scaleX(0);
+        transform-origin: bottom right;
+        transition: transform 0.6s ease-in-out;
+    }
+    .blandas h2:hover::after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+    }
+}
 @media screen and (max-width:980px){
     nav{
         display: none;
@@ -246,18 +374,45 @@ html {
         padding: 10px 0;
     }
 }
-@media screen and (max-width:700px){
-    .sobremi .fila{
-        display: block;
+@media (min-width: 769px) and (max-width: 1188px) {
+    .habilidades {
+        padding-top: 20%;
+        padding-left: 5%;
+        padding-right: 5%;
     }
-    .sobremi .fila .col{
-        width: fit-content;
+    .carruseles {
+        width: 90vw;
     }
-    .sobremi .fila .col .contenedor-intereses{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        gap: 15px;
+    .carruseles .carrusel-pista {
+        width: calc(180px * 18);
+    }
+    .carruseles .carrusel {
+        width: 180px;
+    }
+    .blandas {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+        padding-top: 7%;
+    }
+    .blandas h2 {
+        font-size: 20px;
+        margin: 5px 10px;
+    }
+    .blandas h2::after {
+        content: '';
+        position: absolute;
+        width: 28%;
+        height: 4px;
+        bottom: -15px;
+        left: 36%;
+        background-color: #7F1A1F;
+        transform: scaleX(0);
+        transform-origin: bottom right;
+        transition: transform 0.6s ease-in-out;
+    }
+    .blandas h2:hover::after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
     }
 }
